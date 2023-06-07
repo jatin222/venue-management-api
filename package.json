@@ -1,0 +1,34 @@
+{
+  "name": "venue-management-api",
+  "version": "1.0.0",
+  "description": "1. **Login**\r  2. **Registration as guest**\r  3. **Admin Dashboard**\r  4. **User Mangement (Add, Edit, Delete, View)**\r \t - Add users with Role (Admin, Venue Admin, Event Admin, Guest)\r \t - Delete will be always a soft delete\r \t - Add logs for all errors\r \t - Add logs for all database entries\r  5. **Venue Mangement (Add, Edit, Delete, View)**\r \t - Fields:\r \t - Venue name\r \t - Google Location\r \t - Address (Country, Region, City, Street, Pincode)\r \t - Contact email\r \t - Contact Phone number\r \t - Description\r \t - Venue Gallery (Videos, Images)\r \t - Venue Areas (Multiple Areas) (Name, Description, 2D, 3D)\r \t - Venue Halls (Multiple Halls) (Name, Description, 2D, 3D)\r \t - Venue floors (Multiple floors in Hall) (Name, Description, 2D, 3D)\r \t - Object of venue according to their Area, Hall & Floor (Name, Thumbnail, Description, 2D image, 3D image)\r 6. **Venue public page**\r 7. **2D editor** *(Autosave everything)*\r \t- Object *(Add, Edit, Delete, Drag & Drop, Move object, Multiple select, Multiple move)*\r \t- Add Toolbar *(Move editor position, reset editor position, zoom in, zoom out, reset, undo, rendo, copy, paste, delete)*\r \t- Add object info bar *(See details of object)*",
+  "main": "config/server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jatin222/venue-management-api.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jatin222/venue-management-api/issues"
+  },
+  "homepage": "https://github.com/jatin222/venue-management-api#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0",
+    "mongoose": "^7.2.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
