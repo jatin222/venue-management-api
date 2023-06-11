@@ -1,7 +1,7 @@
 var express = require('express');
 var User = require('../models/user');
 var router = express.Router();
-
+//user routes
 router.get('/', function(req, res){
     console.log('getting all Users');
     User.find({}).exec(function(err, Users){
