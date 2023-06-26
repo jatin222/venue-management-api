@@ -1,8 +1,9 @@
 // src/controllers/userController.js
 
 // Sample user data (replace with your database implementation)
-let users = [];
-
+//let users = [];
+//const Usersdata = require('../src/models/Users.model');
+//const users = require('../models/Users');
 // Get all users
 const getUsers = (req, res) => {
   res.json(users);
@@ -19,16 +20,31 @@ const getUserById = (req, res) => {
 
   res.json(user);
 };
-
+//const usersmodel = require('../models/Users');
 // Create a new user
+const StudentModel = require('../models/studentschema');
 const createUser = (req, res) => {
     console.log('Creating user')
-  const { name, email } = req.body;
+
+    const newStudent = new StudentModel({
+      name: "Sam", email: "Deva@gmail.com"
+  });
+
+  newStudent.save(function (err, data) {
+      if (err) {
+          //console.log(error);
+          res.send("error Data inserted");
+      }
+      else {
+          res.send("Data inserted");
+      }
+  });
+  /*const { name, email } = req.body;
   const newUser = { id: Date.now().toString(), name, email };
 
-  users.push(newUser);
+  users.push(newUser); */
 
-  res.status(201).json(newUser);
+ // res.status(201).json(newUser);
 };
 
 // Update an existing user
